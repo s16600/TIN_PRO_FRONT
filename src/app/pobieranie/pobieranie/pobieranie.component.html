@@ -2,22 +2,25 @@
 
     <h1>Wprowadź informacje na temat poboru próby</h1>
 
-    <p>Numer serii: </p>
-    <input matInput #first [(ngModel)]='numerSerii'>
+    <table style="width:100%">
+        <tr>
+          <th>NUMER SERII</th>
+          <th>NUMER PRÓBY</th> 
+          <th>NAZWA MATERIAŁU</th>
+          <th>SYMBOL MAGAZYNOWY</th>
+          <th>RODZAJ PRÓBY</th>
+          <th></th>
+        </tr>
 
-    <p>Numer próby: </p> 
-    <input matInput #second [(ngModel)]='numerProby'>
+        <tr *ngFor="let sample of samples">
+            <td>{{ sample.numerSerii }}</td>
+            <td>{{ sample.numerProby }}</td>
+            <td>{{ sample.nazwaMaterialu }}</td>
+            <td>{{ sample.symbolMagazynowy }}</td>
+            <td>{{ sample.rodzajProby }}</td> 
+            <td><button (click)="pobierz(sample._id)">Pobór próby</button></td>
+        </tr>
 
-    <p>Nazwa materiału: </p>
-    <input matInput #third [(ngModel)]='nazwaMaterialu'>
-
-    <p>Symbol magazynowy: </p>
-    <input matInput #forth [(ngModel)]='symbolMagazynowy'>
-
-    <p>Rodzaj próby: </p>
-    <input matInput #fifth [(ngModel)]='rodzajProby'>
-
-    <p></p>
-    <button>Pobierz próbę</button>
+    </table>
 
 </div>

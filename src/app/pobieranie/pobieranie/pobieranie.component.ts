@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {​​​​ HttpClient }​​​​ from '@angular/common/http';
+import { ITS_JUST_ANGULAR } from '@angular/core/src/r3_symbols';
 
 @Component({
   selector: 'app-pobieranie',
@@ -15,14 +16,20 @@ export class PobieranieComponent implements OnInit {
   rodzajProby:any;
   numerSpecyfikacji:any;
 
+  samples:any;
+
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
     this.http.get('http://localhost:3001/sample').subscribe((res:any)=>{
-      console.log(res);
-
-      this.numerSerii = '1';
+      //console.log(res);
+      this.samples=res;
     })
+  }
+
+  pobierz(id:any){
+    console.log(id);
+
 
 
   }
