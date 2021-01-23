@@ -5,24 +5,24 @@
     <h1>Wprowadź dane próby</h1>
 
     <p>Numer serii: </p>
-    <input matInput #first [(ngModel)]='numerSerii'>
+    <input matInput #first [(ngModel)]='numerSerii' >
     
     <p>Numer próby: </p> 
-    <input matInput #second [(ngModel)]='numerProby'>
+    <input matInput #second [(ngModel)]='numerProby' >
     
     <p>Nazwa materiału: </p>
-    <input matInput #third [(ngModel)]='nazwaMaterialu'>
+    <input matInput #third [(ngModel)]='nazwaMaterialu' >
     
     <p>Symbol magazynowy: </p>
-    <input matInput #forth [(ngModel)]='symbolMagazynowy'>
+    <input matInput #forth [(ngModel)]='symbolMagazynowy' >
     
     <p>Rodzaj próby: </p>
-    <input matInput #fifth [(ngModel)]='rodzajProby'>
+    <input matInput #fifth [(ngModel)]='rodzajProby' >
     
     <p>Numer specyfikacji: </p>
-    <input matInput #sixth [(ngModel)]='numerSpecyfikacji'>
+    <input matInput #sixth [(ngModel)]='numerSpecyfikacji' >
     
     <p></p>
-    <button (click)="zlecBadanie()">Zleć badanie</button>
+    <button type=submit (click)="zlecBadanie()">Zleć badanie</button>
 
 </div>

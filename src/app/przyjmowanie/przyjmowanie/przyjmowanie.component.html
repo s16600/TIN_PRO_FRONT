@@ -1,1 +1,93 @@
-<p>przyjmowanie works!</p>
+<div>
+
+    <h1>Przydziel próbę do laboratorium</h1>
+
+    <table style="width:100%">
+        <tr>
+          <th>NUMER SERII</th>
+          <th>NUMER PRÓBY</th> 
+          <th>NAZWA MATERIAŁU</th>
+          <th>SYMBOL MAGAZYNOWY</th>
+          <th>RODZAJ PRÓBY</th>
+          <th></th>
+        </tr>
+
+        <tr *ngFor="let sample of samples">
+            <td>{{ sample.numerSerii }}</td>
+            <td>{{ sample.numerProby }}</td>
+            <td>{{ sample.nazwaMaterialu }}</td>
+            <td>{{ sample.symbolMagazynowy }}</td>
+            <td>{{ sample.rodzajProby }}</td> 
+            <td><button (click)="wyswietl_szczegoly(sample._id)">Wyświetl szczegóły</button></td>
+        </tr>
+
+    </table>
+
+    <br><br>
+
+    <table style="width:100%" border="1">
+        
+        <tr>
+            <td>Szczegóły próby</td>
+        </tr>
+        
+        <tr>
+            <td>
+                Numer serii: {{numerSeriiWybranejProby}} <br>
+                Numer próby: {{numerProbyWybranejProby}} <br>
+                Nazwa materiału: {{nazwaMaterialuWybranejProby}} <br>
+                Rodzaj próby: {{rodzajProbyWybranejProby}} <br>
+                Wielkość próby do rozdzielenia: {{wielkoscProbyWybranejProby}}
+            </td>
+
+        </tr>
+        <tr>
+            <td>Laboratoria</td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <th>
+                            Nazwa laboratorium
+                        </th>
+
+                        <th>
+
+                        </th>
+                    </tr>
+                    <tr *ngFor="let lab of labs">
+                        <td >
+                            {{lab.nazwa}}
+                        </td>
+
+                        <td>
+                            <button (click)="przydziel_probe(lab._id)" class="przydziel">Przydziel próbę</button>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Dystrybucja próby</td>
+        </tr>
+        
+        <tr>
+        <table style="border: none;">
+            <tr *ngFor="let d of dystrybucja">
+                <td>
+                    {{d.labs.nazwa}}
+                    {{d.wielkoscProby.$numberDecimal}}
+                </td>
+            </tr>
+        </table>
+
+        </tr>
+
+
+
+    </table>
+
+</div>

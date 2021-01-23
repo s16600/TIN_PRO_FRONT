@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +21,14 @@ export class AppComponent {
 
   goPrzyjmowanie(){
     this.router.navigate(['przyjmowanie']);
+  }
+
+  goLaboratoria(){
+    this.router.navigate(['laboratoria']);
+  }
+
+  goLogowanie(){
+    this.router.navigate(['logowanie']);
   }
 
 }

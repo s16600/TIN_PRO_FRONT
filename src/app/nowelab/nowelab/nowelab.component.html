@@ -1,0 +1,20 @@
+<div>
+
+    <h1>Wprowadź dane laboratorium</h1>
+
+    <p>Nazwa: </p>
+    <input matInput #first [(ngModel)]='nazwa'>
+    
+    <p>Miejscowość: </p> 
+    <input matInput #second [(ngModel)]='miejscowosc'>
+    
+    <p>Ulica: </p>
+    <input matInput #third [(ngModel)]='ulica'>
+    
+    <p>Numer: </p>
+    <input matInput #forth [(ngModel)]='numer'>
+    
+    <p></p>
+    <button (click)="dodajLaboratorium()">Dodaj laboratorium</button>
+
+</div>

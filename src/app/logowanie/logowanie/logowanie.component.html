@@ -1,0 +1,14 @@
+<div>
+
+    <h1>Wprowadź dane logowania</h1>
+
+    <p>Login: </p>
+    <input matInput #first [(ngModel)]='login'>
+    
+    <p>Hasło: </p> 
+    <input matInput type="password" #second [(ngModel)]='haslo'>
+        
+    <p></p>
+    <button (click)="zaloguj()">Zaloguj</button>
+
+</div>

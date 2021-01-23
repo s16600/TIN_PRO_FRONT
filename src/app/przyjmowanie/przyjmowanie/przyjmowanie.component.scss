@@ -1,0 +1,47 @@
+div{
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+h1{
+    text-align: center; 
+    color: rgb(2, 178, 236);
+    margin-top: 35px;
+}
+
+p{
+    font-size: 16px;
+    color: rgb(2, 178, 236);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    //padding: 15px 32px;
+}
+
+th{
+    font-size: 16px;
+    color: rgb(2, 178, 236);
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight:normal;
+    text-align: left; 
+}
+
+tr{
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+button{
+    //background-color:rgb(252, 130, 130);
+    background-color: rgb(66, 208, 255);
+    font-size: 16px;
+    //padding: 15px 32px;
+    //margin-top: 30px;
+    width: 100%;
+}
+
+button.przydziel{
+    background-color:rgb(252, 130, 130);
+}

@@ -1,0 +1,23 @@
+<p></p>
+
+<div>
+
+    <h1>Laboratoria</h1>
+    
+    <table>
+        <tr>
+          <th>NAZWA LABORATORIUM</th>
+          <th>ADRES</th>
+        </tr>
+
+        <tr *ngFor="let lab of labs">
+            <td>{{ lab.nazwa }}</td>
+            <td>{{ lab.adres.miejscowosc }}, {{lab.adres.ulica}} {{lab.adres.numer}}</td>
+        </tr>
+
+    </table>
+
+    <p></p>
+    <button (click)="dodajLaboratorium()">Dodaj laboratorium</button>
+
+</div>

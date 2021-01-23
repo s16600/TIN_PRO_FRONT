@@ -28,10 +28,25 @@ export class PobieranieComponent implements OnInit {
   }
 
   pobierz(id:any){
-    console.log(id);
+    if(sessionStorage.getItem('user')==undefined){
+      alert("Proszę się zalogować");
+      return;
+    }
 
+    var wielkoscProby = prompt("Podaj wielkość próby");
 
+    if (wielkoscProby!=null){
+      var sample = {
+        "_id": id,
+        "wielkoscProby": wielkoscProby
+      }
+  
+      this.http.post('http://localhost:3001/'+id+'/take',sample).subscribe((res:any)=>{
+          console.log(res);
+      });
+    }
 
+    //https://www.techiediaries.com/angular-material-login-form-modal-dialog/
   }
 
 }
